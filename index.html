@@ -9,7 +9,13 @@
 <body>
   <main id="main-container" role="main" class="container">
     <div id="content" style="display: none;">
-      <h4>Welcome <span id="userName"></span></h4>    
+      <h4>Welcome <span id="userName"></span></h4>
+      <hr />
+      <label>Files in your OneDrive root folder:</label>
+      <ul id="downloadLinks"></ul>
+      <hr />
+      <input type="file" onchange="fileSelected(this);" />
+      <div id="uploadMessage"></div>
     </div>
     <a id="signin" onclick="displayUI(); return false;" href="#">
       <img src="./images/ms-symbollockup_signin_light.png" alt="Sign in with Microsoft" />
